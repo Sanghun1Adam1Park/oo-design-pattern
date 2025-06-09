@@ -10,4 +10,8 @@ public class MyConnection {
         this.id = id;
         this.conn = conn;
     }
+
+  public int getId() {
+    return id;
+  }
 }

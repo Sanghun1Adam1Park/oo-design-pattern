@@ -86,3 +86,5 @@ Instead, both should depend on a common abstraction (such as an interface or an 
 
 This abstraction defines a contract that low-level modules implement and high-level modules rely on.  
 This way, high-level logic can interact with low-level details without knowing how they are implemented.
+
+Source: https://www.oodesign.com

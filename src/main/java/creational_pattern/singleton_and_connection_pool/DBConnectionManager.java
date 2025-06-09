@@ -12,6 +12,16 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * - Objecting Pooling pattern maintains a set of reusable object for efficiency and control.
  *
  * Why is this useful?
+ * - The Singleton pattern ensures only one instance of the connection manager exists,
+ *   which is critical for consistent resource management in a multithreaded application.
+ * - The Object Pooling pattern improves performance by reusing a limited number of expensive resources (database connections),
+ *   rather than creating and destroying them frequently.
+ * - This reduces overhead, avoids exhausting the database with too many concurrent connections,
+ *   and provides better control over how many connections are in use.
+ * - Combined, these patterns ensure thread-safe, efficient, and scalable handling of database connections.
+ *
+ * For example,
+ * Let's say you are making class that manages DB connection, and you realize following:
  * - Without pooling, each client-side request may open a new database connection, leading to:
  *   - High overhead due to expensive connection creation.
  *   - Too many open connections, potentially overwhelming the database.
